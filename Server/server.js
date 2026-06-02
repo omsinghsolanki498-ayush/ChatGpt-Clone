@@ -24,7 +24,7 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("(.*)", cors());
+
 
 // MIDDLEWARES
 app.use(express.json());  // for json data (middleware)
