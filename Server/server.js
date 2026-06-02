@@ -31,7 +31,7 @@ app.use(cookieParser()); // cookie built after every page check cookie have or n
 // ROUTES
 app.use("/api/auth", require("./routes/AuthRoutes")); // 1
 
-app.use("/api/chat", require("./routes/ChatRoutes")); // 2
+app.use("/api/chat", require("./routes/chatRoutes")); // 2
 
 
 // test route
