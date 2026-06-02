@@ -53,7 +53,7 @@ const sendMessage = async (req, res) => {
 
   } catch (error) {
 
-    console.log("FULL ERROR =>");
+    console.log("FULL ERROR =>",error);
 
     console.log(error);
 
