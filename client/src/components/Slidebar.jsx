@@ -22,9 +22,7 @@ function Sidebar({
   const navigate = useNavigate();
 
   const [showRecent, setShowRecent] = useState(false);
-
-  // MOBILE TOGGLE (drawer style)
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // mobile drawer
 
   const logout = () => {
     localStorage.removeItem("token");
@@ -39,7 +37,7 @@ function Sidebar({
       { role: "assistant", content: chat.response },
     ]);
 
-    setOpen(false); // close sidebar on mobile after selection
+    setOpen(false); // close sidebar on mobile
   };
 
   return (
@@ -56,7 +54,7 @@ function Sidebar({
         </button>
       </div>
 
-      {/* OVERLAY (mobile) */}
+      {/* OVERLAY */}
       {open && (
         <div
           onClick={() => setOpen(false)}
@@ -72,27 +70,27 @@ function Sidebar({
           w-[280px] bg-zinc-950 border-r border-zinc-800
           flex flex-col justify-between
           transform transition-transform duration-300
-
           ${open ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
         `}
       >
-        {/* TOP */}
+        {/* TOP SECTION */}
         <div className="overflow-y-auto">
 
           {/* HEADER */}
-          <div className="p-4 flex items-center justify-between gap-3">
+          <div className="p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
                 alt="logo"
-                className="w-8 h-8 invert"
+                className="w-8 h-8"
               />
+
               <h1 className="text-xl font-semibold text-white">
                 ChatGPT
               </h1>
             </div>
 
-            {/* CLOSE BUTTON (mobile only) */}
+            {/* CLOSE BUTTON */}
             <button
               onClick={() => setOpen(false)}
               className="md:hidden text-white text-xl"
@@ -115,7 +113,7 @@ function Sidebar({
             </button>
           </div>
 
-          {/* RECENT */}
+          {/* RECENT TOGGLE */}
           <div className="mt-6 px-3">
             <button
               onClick={() => setShowRecent(!showRecent)}
