@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+
 const express = require("express"); // import express
 const cors = require("cors"); // for frontend connection
 const cookieParser = require("cookie-parser"); // for set cookie in browser
@@ -16,14 +17,16 @@ mongoose.connect(process.env.MONGO_URI)  // mongoose connection for .env URI
 
 // CORS
 
+
+
 app.use(cors({
-  origin: [
-    "http://localhost:3002",
-    "https://chat-gpt-clone-one-delta.vercel.app"
-  ],
+  origin: "https://chat-gpt-clone-one-delta.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
 
+// handle preflight safely
+app.options("/*", cors());
 app.options("*", cors());
 
 // MIDDLEWARES
