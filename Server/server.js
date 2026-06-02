@@ -15,11 +15,11 @@ mongoose.connect(process.env.MONGO_URI)  // mongoose connection for .env URI
 
 
 // CORS
+
 app.use(cors({
-  origin: "http://localhost:5173", // frontend connection using cors
+  origin: "https://chat-gpt-clone-sand-seven.vercel.app",
   credentials: true,
 }));
-
 
 // MIDDLEWARES
 app.use(express.json());  // for json data (middleware)
@@ -41,6 +41,8 @@ app.get("/", (req, res) => {
 
 
 // SERVER
-app.listen(3002, () => {
-  console.log("Server running on port 3002");
+const PORT = process.env.PORT || 3002;
+
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
 });
