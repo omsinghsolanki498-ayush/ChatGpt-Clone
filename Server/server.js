@@ -1,13 +1,11 @@
 require("dotenv").config();
 
-
 const express = require("express"); // import express
 const cors = require("cors"); // for frontend connection
 const cookieParser = require("cookie-parser"); // for set cookie in browser
 const mongoose = require("mongoose"); 
 
 const app = express();
-
 
 // DATABASE
 mongoose.connect(process.env.MONGO_URI)  // mongoose connection for .env URI
