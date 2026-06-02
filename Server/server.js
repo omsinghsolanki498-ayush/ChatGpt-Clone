@@ -17,7 +17,8 @@ mongoose.connect(process.env.MONGO_URI)  // mongoose connection for .env URI
 
 app.use(cors({
   origin: [
-    "https://chat-gpt-clone-one-delta.vercel.app"
+    "http://localhost:5173",
+     "https://chat-gpt-clone-seven-blue.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
