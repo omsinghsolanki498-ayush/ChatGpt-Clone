@@ -34,7 +34,7 @@ app.use("/api/auth", require("./routes/AuthRoutes")); // 1
 app.use("/api/chat", require("./routes/ChatRoutes")); // 2
 
 
-// TEST ROUTE
+// test route
 app.get("/", (req, res) => {
   res.send("Backend Running Successfully");
 });
