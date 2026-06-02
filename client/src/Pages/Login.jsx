@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link , useNavigate} from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
+const API = import.meta.env.VITE_API_URL;
 
 function Login() {
 
@@ -27,7 +28,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "http://localhost:3002/api/auth/login",
+        `${API}/api/auth/login`,
         formData
       );
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
-
+const API = import.meta.env.VITE_API_URL;
 function Register() {
   const navigate = useNavigate();
 
@@ -29,7 +29,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:3002/api/auth/register",
+        `${API}/api/auth/register`,
         {
           name: formData.name,
           email: formData.email,

@@ -9,6 +9,7 @@ import Sidebar from "../components/Slidebar";
 import Navbar from "../components/Navbar";
 import Message from "../components/Message";
 import PromptInput from "../components/PromptInput";
+const API = import.meta.env.VITE_API_URL;
 
 const Dashboard = () => {
 
@@ -50,7 +51,7 @@ const Dashboard = () => {
       }
 
       await axios.get(
-        "http://localhost:3002/api/auth/dashboard",
+        `${API}/api/auth/dashboard`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -78,7 +79,7 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:3002/api/chat/getchats",
+        `${API}/api/chat/getchats`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -133,7 +134,7 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:3002/api/chat/send",
+        `${API}/api/chat/send`,
         { prompt },
         {
           headers: {
@@ -181,7 +182,7 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:3002/api/chat/delete/${id}`,
+        `${API}/api/chat/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
