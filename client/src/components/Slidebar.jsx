@@ -130,11 +130,10 @@ function Sidebar({
               {chatHistory.map((chat) => (
                 <div
                   key={chat._id}
-                  className={`group flex items-center justify-between gap-2 p-3 rounded-xl cursor-pointer transition-all ${
-                    selectedChat === chat._id
+                  className={`group flex items-center justify-between gap-2 p-3 rounded-xl cursor-pointer transition-all ${selectedChat === chat._id
                       ? "bg-[#2a2a2a]"
                       : "hover:bg-[#2a2a2a]"
-                  }`}
+                    }`}
                 >
                   {/* OPEN CHAT */}
                   <div
@@ -150,7 +149,9 @@ function Sidebar({
                   {/* DELETE */}
                   <button
                     onClick={() => handleDelete(chat._id)}
-                    className="opacity-0 group-hover:opacity-100 transition"
+                    className=" opacity-100 md:opacity-0 md:group-hover:opacity-100
+                            transition
+                             ml-2"
                   >
                     <FiTrash2 className="text-red-400 hover:text-red-500" />
                   </button>
