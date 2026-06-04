@@ -44,7 +44,7 @@ function Sidebar({
     <>
       {/* MOBILE TOP BAR */}
       <div className="md:hidden flex items-center justify-between bg-zinc-950 text-white px-4 py-3 border-b border-zinc-800">
-        <h1 className="font-bold text-lg">ChatGPT</h1>
+        <h1 className="font-bold text-lg">ChatFusion</h1>
 
         <button
           onClick={() => setOpen(true)}
@@ -86,7 +86,7 @@ function Sidebar({
               />
 
               <h1 className="text-xl font-semibold text-white">
-                ChatGPT
+                ChatFusion
               </h1>
             </div>
 
