@@ -96,9 +96,9 @@ function Login() {
 
             <button
               type="submit"
-              className="w-full bg-emerald-500 hover:bg-emerald-600 
+              className="w-full  bg-emerald-500 hover:bg-emerald-600 
               text-white py-3 sm:py-4 rounded-xl font-semibold 
-              text-base sm:text-lg transition"
+              text-base sm:text-lg hover:scale-[1.02]"
             >
               Login
             </button>
