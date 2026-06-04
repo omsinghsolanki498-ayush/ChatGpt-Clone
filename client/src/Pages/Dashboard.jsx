@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import logo from "../assest/chat.jpg";
 
 import Sidebar from "../components/Slidebar";
 import Navbar from "../components/Navbar";
@@ -150,7 +151,7 @@ const Dashboard = () => {
           {messages.length === 0 && (
             <div className="h-full flex flex-col items-center justify-center text-center px-4">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+                src={logo}
                 alt="logo"
                 className="w-14 md:w-20 h-14 md:h-20 invert mb-4 md:mb-6"
               />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
+import logo from "../assest/chat.jpg";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -53,7 +54,8 @@ function Register() {
       <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-gray-800">
         <div className="flex items-center gap-3">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+            // src="https://www.magnific.com/free-vector/happy-floating-ai-robot_136880955.htm#fromView=keyword&page=2&position=27&uuid=f2931c20-7658-42cb-947e-0821926b6e52&query=Ai+chatbot+logo"
+            src={logo}
             alt="logo"
             className="w-8 h-8 sm:w-10 sm:h-10"
           />
@@ -83,7 +85,7 @@ function Register() {
           {/* LOGO */}
           <div className="flex justify-center mb-5">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+              src={logo}
               alt="logo"
               className="w-14 h-14 sm:w-16 sm:h-16"
             />
@@ -180,3 +182,4 @@ function Register() {
 }
 
 export default Register;
+

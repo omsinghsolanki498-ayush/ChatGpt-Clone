@@ -10,6 +10,7 @@ import {
 
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import logo from "../assest/chat.jpg";
 
 function Sidebar({
   chatHistory,
@@ -80,7 +81,7 @@ function Sidebar({
           <div className="p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+                 src={logo}
                 alt="logo"
                 className="w-8 h-8"
               />

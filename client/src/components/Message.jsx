@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Copy, Check } from "lucide-react";
 
+
 const Message = ({ role, content }) => {
   const [copied, setCopied] = useState(false);
 
