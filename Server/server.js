@@ -18,6 +18,7 @@ mongoose.connect(process.env.MONGO_URI)  // mongoose connection for .env URI
 app.use(cors({
   origin: [
     "http://localhost:5173",
+     "https://promptfusion-iota.vercel.app",
     
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
