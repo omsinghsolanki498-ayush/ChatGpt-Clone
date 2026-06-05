@@ -48,7 +48,7 @@ function Register() {
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#0b1120] to-[#111827]">
       
       {/* TOASTER */}
-      <Toaster position="top-right" />
+      <Toaster position="top-right"/>
 
       {/* NAVBAR */}
       <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-gray-800">
