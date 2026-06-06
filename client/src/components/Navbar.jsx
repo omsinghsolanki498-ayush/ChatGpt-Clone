@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className="h-[70px] border-b border-gray-900 flex items-center px-8">
-        <h1 className="text-2xl text-white font-serif">ChatFusion</h1>
+        <h1 className="text-2xl text-white font-serif">PromptFusion</h1>
     </div>
   )
 }

@@ -87,7 +87,7 @@ function Sidebar({
               />
 
               <h1 className="text-xl font-semibold text-white">
-                ChatFusion
+              PromptFusion
               </h1>
             </div>
 

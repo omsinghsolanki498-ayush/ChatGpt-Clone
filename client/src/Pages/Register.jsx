@@ -60,7 +60,7 @@ function Register() {
             className="w-8 h-8 sm:w-10 sm:h-10"
           />
           <h1 className="text-white text-lg sm:text-2xl font-bold">
-            ChatFusion
+           PromptFusion
           </h1>
         </div>
 
@@ -175,7 +175,7 @@ function Register() {
 
       {/* FOOTER */}
       <footer className="border-t border-gray-800 py-4 text-center text-gray-500 text-xs sm:text-sm">
-        © 2026 ChatFusion
+        © 2026 PromptFusion
       </footer>
     </div>
   );
