@@ -45,7 +45,7 @@ function Sidebar({
     <>
       {/* MOBILE TOP BAR */}
       <div className="md:hidden flex items-center justify-between bg-zinc-950 text-white px-4 py-3 border-b border-zinc-800">
-        <h1 className="font-bold text-lg">ChatFusion</h1>
+        <h1 className="font-bold text-lg">PromptFusion</h1>
 
         <button
           onClick={() => setOpen(true)}
